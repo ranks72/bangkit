@@ -1,5 +1,5 @@
 from flask import Flask, request
-
+from Predict import ProccessText
 
 app = Flask(__name__)
 
@@ -9,12 +9,15 @@ def welcome():
 
 @app.route('/test', methods=['POST'])
 def predict():
-    file = request.files['image'].read()
-    
+    args = request.args.get("kalimat")
+    text = ProccessText(args)
 
 
-    # return send_file(filename, mimetype='image/gif')
-    return predict()
+
+
+
+
+    return text.result()
 
 if __name__ == "__main__":
     # app.run()
