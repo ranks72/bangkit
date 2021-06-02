@@ -1,5 +1,5 @@
 from flask import Flask, request
-from Predict import ProccessText
+from Predict import Proses
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def welcome():
 @app.route('/test', methods=['POST'])
 def predict():
     args = request.args.get("kalimat")
-    text = ProccessText(args)
+    text = Proses(args)
 
 
 

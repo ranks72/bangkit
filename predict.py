@@ -1,12 +1,12 @@
-class ProccessText :
-    def init(self, args):
+class Proses :
+    def __init__(self, args):
         self.string = args
 
     def result(self) :
-        result  = ''
+        result  = self.string
 # 
 #
-# ML YANG NGERJAIN
+# Bagian ML
 # 
 # 
 # 
