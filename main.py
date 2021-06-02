@@ -10,8 +10,7 @@ def welcome():
 @app.route('/test', methods=['POST'])
 def predict():
     file = request.files['image'].read()
-    requestToImage = RequestToImage(file)
-    img = requestToImage.result()
+    
 
 
     # return send_file(filename, mimetype='image/gif')
